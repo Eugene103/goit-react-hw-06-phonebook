@@ -21,7 +21,7 @@ export const ContactForm = () => {
   
 const newContact = (newContact) => {
   const newNameToLower = newContact.name.toLocaleLowerCase()
-  console.log(contacts)
+ 
   const checkName = contacts.some(contact => contact.name.toLocaleLowerCase() === newNameToLower)
     if (checkName) {
       alert(`${newContact.name} is already in contacts`)

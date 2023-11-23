@@ -2,7 +2,7 @@ import { checkFilter } from "redux/filterSlice";
 import { Label } from "./FindCont.styled";
 import { useSelector, useDispatch } from 'react-redux';
 
-export const FindCont = ({ filterValue }) => {
+export const FindCont = () => {
     const dispatch = useDispatch();
     const filter = useSelector(state => state.filter.filter)
 

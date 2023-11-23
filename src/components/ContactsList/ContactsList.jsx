@@ -1,13 +1,15 @@
 import {delContact } from "redux/contactsSlice";
 import { Container, Item, List, Btn } from "./ContactsList.styled";
 import { useDispatch } from 'react-redux';
+import { initialFilter } from "redux/filterSlice";
 
 
 export const ContactsList = ({ arr}) => {
     const dispatch = useDispatch();
 
     const removeContact = (id) => [
-        dispatch(delContact(id))
+        dispatch(delContact(id)),
+        dispatch(initialFilter())
   ]
     return <Container>
         <List>
